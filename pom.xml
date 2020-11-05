@@ -17,7 +17,7 @@
 
     <groupId>rtnk.springframework</groupId>
     <artifactId>modpetclinic</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2-SNAPSHOT</version>
     <name>modpetclinic</name>
     <description>PetClinic Project for Spring Boot</description>
 
@@ -42,6 +42,6 @@
     </build>
     <scm>
         <developerConnection>scm:git:https://github.com/rtnkanth/modpetclinic.git</developerConnection>
-      <tag>modpetclinic-0.0.1</tag>
+      <tag>HEAD</tag>
   </scm>
 </project>
