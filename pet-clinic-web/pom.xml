@@ -3,7 +3,7 @@
     <parent>
         <artifactId>modpetclinic</artifactId>
         <groupId>rtnk.springframework</groupId>
-        <version>0.0.2-SNAPSHOT</version>
+        <version>0.0.2</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -12,7 +12,7 @@
 <dependencies>
     <dependency>
         <artifactId>pet-clinic-data</artifactId>
-        <version>0.0.2-SNAPSHOT</version>
+        <version>0.0.2</version>
         <groupId>rtnk.springframework</groupId>
     </dependency>
     <dependency>
