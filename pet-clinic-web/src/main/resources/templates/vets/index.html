@@ -16,9 +16,9 @@
             </thead>
             <tbody>
             <tr th:each="vet:${vets}">
-                <td th:text="${vet?.id}">1</td>
-                <td th:text="${vet?.firstname}">Joe</td>
-                <td th:text="${vet?.lastname}">Buck</td>
+                <td th:text="${vet.id}">1</td>
+                <td th:text="${vet.firstname}">Joe</td>
+                <td th:text="${vet.lastname}">Buck</td>
             </tr>
             </tbody>
         </table>
