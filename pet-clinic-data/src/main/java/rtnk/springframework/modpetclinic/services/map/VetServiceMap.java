@@ -1,11 +1,11 @@
 package rtnk.springframework.modpetclinic.services.map;
 
 import rtnk.springframework.modpetclinic.model.Vet;
-import rtnk.springframework.modpetclinic.services.CrudService;
+import rtnk.springframework.modpetclinic.services.VetService;
 
 import java.util.Set;
 
-public class VetServiceMap extends AbstractMapService<Vet, Long> implements CrudService<Vet, Long> {
+public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
 
     @Override
     public Set<Vet> findAll() {
