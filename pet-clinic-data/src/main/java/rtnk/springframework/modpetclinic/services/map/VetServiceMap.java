@@ -1,10 +1,12 @@
 package rtnk.springframework.modpetclinic.services.map;
 
+import org.springframework.stereotype.Service;
 import rtnk.springframework.modpetclinic.model.Vet;
 import rtnk.springframework.modpetclinic.services.VetService;
 
 import java.util.Set;
 
+@Service
 public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
 
     @Override

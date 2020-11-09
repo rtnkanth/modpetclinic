@@ -6,17 +6,15 @@ import rtnk.springframework.modpetclinic.model.Owner;
 import rtnk.springframework.modpetclinic.model.Vet;
 import rtnk.springframework.modpetclinic.services.OwnerService;
 import rtnk.springframework.modpetclinic.services.VetService;
-import rtnk.springframework.modpetclinic.services.map.OwnerServiceMap;
-import rtnk.springframework.modpetclinic.services.map.VetServiceMap;
 
 @Component
 public class DataLoader implements CommandLineRunner {
     private final OwnerService ownerService;
     private final VetService vetService;
 
-    public DataLoader() {
-        ownerService = new OwnerServiceMap();
-        vetService = new VetServiceMap();
+    public DataLoader(OwnerService ownerService, VetService vetService) {
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
 
     @Override

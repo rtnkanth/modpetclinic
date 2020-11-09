@@ -1,10 +1,12 @@
 package rtnk.springframework.modpetclinic.services.map;
 
+import org.springframework.stereotype.Service;
 import rtnk.springframework.modpetclinic.model.Owner;
 import rtnk.springframework.modpetclinic.services.OwnerService;
 
 import java.util.Set;
 
+@Service
 public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
 
     @Override
