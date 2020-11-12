@@ -1,6 +1,6 @@
 package rtnk.springframework.modpetclinic.model;
 
-public class Person extends BaseEntity{
+public class Person extends BaseEntity {
 
     private String firstname;
     private String lastname;
