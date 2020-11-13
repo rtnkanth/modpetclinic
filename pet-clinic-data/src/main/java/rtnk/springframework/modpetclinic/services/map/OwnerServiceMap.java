@@ -2,6 +2,7 @@ package rtnk.springframework.modpetclinic.services.map;
 
 import org.springframework.stereotype.Service;
 import rtnk.springframework.modpetclinic.model.Owner;
+import rtnk.springframework.modpetclinic.model.Pet;
 import rtnk.springframework.modpetclinic.services.OwnerService;
 import rtnk.springframework.modpetclinic.services.PetService;
 import rtnk.springframework.modpetclinic.services.PetTypeService;
@@ -32,7 +33,7 @@ public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements 
     @Override
     public Owner save(Owner object) {
 
-        if(object != null)
+        if (object != null){
             if (object.getPets() != null) {
                 object.getPets().forEach(pet -> {
                     if (pet.getPetType() != null) {
@@ -42,10 +43,17 @@ public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements 
                     } else {
                         throw new RuntimeException("Pet Type is Required");
                     }
+                    if(pet.getId() == null){
+                        Pet savedPet = petService.save(pet);
+                        pet.setId(savedPet.getId());
+                    }
                 });
             }
         return super.save(object);
+    }else{
+        return null;
     }
+}
 
     @Override
     public void delete(Owner object) {

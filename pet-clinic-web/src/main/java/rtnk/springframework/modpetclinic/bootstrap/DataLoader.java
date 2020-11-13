@@ -3,11 +3,14 @@ package rtnk.springframework.modpetclinic.bootstrap;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import rtnk.springframework.modpetclinic.model.Owner;
+import rtnk.springframework.modpetclinic.model.Pet;
 import rtnk.springframework.modpetclinic.model.PetType;
 import rtnk.springframework.modpetclinic.model.Vet;
 import rtnk.springframework.modpetclinic.services.OwnerService;
 import rtnk.springframework.modpetclinic.services.PetTypeService;
 import rtnk.springframework.modpetclinic.services.VetService;
+
+import java.time.LocalDate;
 
 @Component
 public class DataLoader implements CommandLineRunner {
@@ -40,6 +43,13 @@ public class DataLoader implements CommandLineRunner {
         owner1.setTelephone("9876543210");
         ownerService.save(owner1);
 
+        Pet tonysPet = new Pet();
+        tonysPet.setPetType(savedDogPetType);
+        tonysPet.setOwner(owner1);
+        tonysPet.setBirthDate(LocalDate.now());
+        tonysPet.setName("Alex");
+        owner1.getPets().add(tonysPet);
+
         Owner owner2 = new Owner();
         owner2.setFirstname("Steve");
         owner2.setLastname("Rogers");
@@ -47,6 +57,13 @@ public class DataLoader implements CommandLineRunner {
         owner2.setCity("Vijayawada");
         owner2.setTelephone("9432187650");
         ownerService.save(owner2);
+
+        Pet stevesPet = new Pet();
+        stevesPet.setPetType(savedCatPetType);
+        stevesPet.setOwner(owner2);
+        stevesPet.setBirthDate(LocalDate.now());
+        stevesPet.setName("Lucy");
+        owner1.getPets().add(stevesPet);
 
         System.out.println("Owners Loaded....");
 
