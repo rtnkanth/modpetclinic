@@ -2,12 +2,12 @@ package rtnk.springframework.modpetclinic.services.map;
 
 import org.springframework.stereotype.Service;
 import rtnk.springframework.modpetclinic.model.Speciality;
-import rtnk.springframework.modpetclinic.services.SpecialitiesService;
+import rtnk.springframework.modpetclinic.services.SpecialityService;
 
 import java.util.Set;
 
 @Service
-public class SpecialityMapService extends AbstractMapService<Speciality, Long> implements SpecialitiesService {
+public class SpecialityMapService extends AbstractMapService<Speciality, Long> implements SpecialityService {
 
     @Override
     public Set<Speciality> findAll() {
