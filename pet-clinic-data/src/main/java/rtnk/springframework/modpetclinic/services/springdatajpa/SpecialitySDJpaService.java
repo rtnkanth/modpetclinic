@@ -1,5 +1,6 @@
 package rtnk.springframework.modpetclinic.services.springdatajpa;
 
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 import rtnk.springframework.modpetclinic.model.Speciality;
 import rtnk.springframework.modpetclinic.repositories.SpecialityRepository;
@@ -9,6 +10,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Service
+@Profile("springdatajpa")
 public class SpecialitySDJpaService implements SpecialityService {
 
     private final SpecialityRepository specialityRepository;
