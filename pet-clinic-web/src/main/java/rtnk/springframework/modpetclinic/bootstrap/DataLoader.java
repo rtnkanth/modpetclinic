@@ -54,8 +54,8 @@ public class DataLoader implements CommandLineRunner {
         Speciality savedDentistry = specialityService.save(dentistry);
 
         Owner owner1 = new Owner();
-        owner1.setFirstname("Tony");
-        owner1.setLastname("Stark");
+        owner1.setFirstName("Tony");
+        owner1.setLastName("Stark");
         owner1.setAddress("94-140 SriRam Nagar");
         owner1.setCity("Guntur");
         owner1.setTelephone("9876543210");
@@ -69,8 +69,8 @@ public class DataLoader implements CommandLineRunner {
         owner1.getPets().add(tonysPet);
 
         Owner owner2 = new Owner();
-        owner2.setFirstname("Steve");
-        owner2.setLastname("Rogers");
+        owner2.setFirstName("Steve");
+        owner2.setLastName("Rogers");
         owner2.setAddress("94-142 Benz Circle");
         owner2.setCity("Vijayawada");
         owner2.setTelephone("9432187650");
@@ -86,20 +86,20 @@ public class DataLoader implements CommandLineRunner {
         System.out.println("Owners Loaded....");
 
         Vet vet1 = new Vet();
-        vet1.setFirstname("Carol");
-        vet1.setLastname("Denvers");
+        vet1.setFirstName("Carol");
+        vet1.setLastName("Denvers");
         vetService.save(vet1);
         vet1.getSpecialities().add(savedRadiology);
 
         Vet vet2 = new Vet();
-        vet2.setFirstname("Nat");
-        vet2.setLastname("Romanoff");
+        vet2.setFirstName("Nat");
+        vet2.setLastName("Romanoff");
         vetService.save(vet2);
         vet2.getSpecialities().add(savedSurgery);
 
         Vet vet3 = new Vet();
-        vet3.setFirstname("Bruce");
-        vet3.setLastname("Banner");
+        vet3.setFirstName("Bruce");
+        vet3.setLastName("Banner");
         vetService.save(vet3);
         vet3.getSpecialities().add(savedDentistry);
 
