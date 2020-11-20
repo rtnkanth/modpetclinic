@@ -56,8 +56,8 @@ public class DataLoader implements CommandLineRunner {
         Owner owner1 = new Owner();
         owner1.setFirstName("Tony");
         owner1.setLastName("Stark");
-        owner1.setAddress("94-140 SriRam Nagar");
-        owner1.setCity("Guntur");
+        owner1.setAddress("94-140 Aroma Circle");
+        owner1.setCity("Chandigarh");
         owner1.setTelephone("9876543210");
 
         Pet tonysPet = new Pet();
@@ -86,7 +86,7 @@ public class DataLoader implements CommandLineRunner {
         Visit catVisit = new Visit();
         catVisit.setPet(stevesPet);
         catVisit.setDate(LocalDate.now());
-        catVisit.setDescription("Sneezy Cat");
+        catVisit.setDescription("Nail Cut");
         visitService.save(catVisit);
 
         System.out.println("Owners Loaded....");
@@ -94,20 +94,20 @@ public class DataLoader implements CommandLineRunner {
         Vet vet1 = new Vet();
         vet1.setFirstName("Carol");
         vet1.setLastName("Denvers");
-        vetService.save(vet1);
         vet1.getSpecialities().add(savedRadiology);
+        vetService.save(vet1);
 
         Vet vet2 = new Vet();
         vet2.setFirstName("Nat");
         vet2.setLastName("Romanoff");
-        vetService.save(vet2);
         vet2.getSpecialities().add(savedSurgery);
+        vetService.save(vet2);
 
         Vet vet3 = new Vet();
         vet3.setFirstName("Bruce");
         vet3.setLastName("Banner");
-        vetService.save(vet3);
         vet3.getSpecialities().add(savedDentistry);
+        vetService.save(vet3);
 
         System.out.println("Vets Loaded....");
     }
